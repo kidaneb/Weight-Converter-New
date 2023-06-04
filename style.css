@@ -21,6 +21,13 @@ body{
     width:80% ;
     border:1px solid red;
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 70px;
+    padding: 10px;
+
 }
 .body-container{
     height:70% ;
@@ -35,41 +42,149 @@ body{
     height:90% ;
     width:40% ;
     border: 1px solid red;
-    color: aliceblue;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     
 }
-.body-container .to-container{
+
+ .from-button-container{
+    height:45% ;
+    width:90% ;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.from-button{
+    height:80% ;
+    width:80% ;
+    font-size: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid cyan;
+    border-radius: 5px;   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    position: relative;
+
+}
+
+.from-dropdown{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 100%; /* Add this line */
+    left: 0; /* Add this line */
+    
+    z-index: 1; /* Add this line */
+    
+}
+.button{
+    height:80% ;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: blue;
+    font-size: 20px;
+    margin: 5px;
+}
+.from-button:hover .from-dropdown{
+    display:flex;
+    flex-direction: column;
+    
+}
+button:hover{
+    background-color: rgb(87, 87, 217);
+}
+.from-input-container{
+    height:45% ;
+    width: 90%;
+    border: 1px solid red;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.from-input{
+    height:90% ;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 5em;
+}
+
+.to-container{
     height:90% ;
     width:40% ;
     border: 1px solid red;
-    color: aliceblue;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.body-container .from-container .from-button-container{
+
+.to-button-container{
     height:45% ;
     width:90% ;
     border: 1px solid red;
-}
-.body-container .from-container .from-input-container{
-    height:45% ;
-    width: 90%;
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.body-container .to-container .to-button-container{
-    height:45% ;
-    width:90% ;
-    border: 1px solid red;
+.to-button{
+    height:80% ;
+    width:80% ;
+    font-size: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid cyan;
+    border-radius: 5px;          
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    position: relative;
 }
-.body-container .to-container .to-input-container{
+
+.to-dropdown{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 100%; /* Add this line */
+    left: 0; /* Add this line */
+    
+    z-index: 1; /* Add this line */
+    
+}
+
+.to-button:hover .to-dropdown{
+    display:flex;
+    flex-direction: column;
+    
+}
+.to-input-container{
     height:45% ;
     width: 90%;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-input{
+    height:90% ;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 5em;
 }
