@@ -47,7 +47,8 @@ toButton.addEventListener('click', (e)=>{
         toGram2 = 1;
         if(toInput.value !== ''){
             calculation2();
-        }
+        }else{
+        calculation1();}
         console.log('1');
     }
     else if(e.target.classList.contains('to-pound')){
@@ -55,7 +56,8 @@ toButton.addEventListener('click', (e)=>{
         toGram2 = 453.592;
         if(toInput.value !== ''){
             calculation2();
-        }
+        }else{
+            calculation1();}
         console.log('2');
     }
     else if(e.target.classList.contains('to-ounce')){
@@ -63,7 +65,8 @@ toButton.addEventListener('click', (e)=>{
         toGram2 = 28/3495;
         if(toInput.value !== ''){
             calculation2();
-        }
+        }else{
+            calculation1();}
         console.log('3');
     }
     else if(e.target.classList.contains('to-Kg')){
@@ -71,7 +74,8 @@ toButton.addEventListener('click', (e)=>{
         toGram2 = 1000;
         if(toInput.value !== ''){
             calculation2();
-        }
+        }else{
+            calculation1();}
         console.log('4');
     }
 })
