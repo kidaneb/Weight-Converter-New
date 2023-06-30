@@ -37,6 +37,8 @@ document.getElementById('mass').addEventListener('click', function(event){
 
     const fromButton = document.getElementById('from-button');
     fromButton.lastChild.remove();
+    const toButton = document.getElementById('to-button');
+    toButton.lastChild.remove();
     
     // FROM DROP DOWNS
 
@@ -68,6 +70,13 @@ document.getElementById('mass').addEventListener('click', function(event){
     fromDropdown.appendChild(fromKg);
 
     // TO DROP DOWNS
+
+    const toDropdown = document.createElement('div');
+    toDropdown.className = 'to-dropdown';
+    toDropdown.id = 'to-dropdown';
+
+    toButton.appendChild(toDropdown);
+
     const toGram = document.createElement('button');
     toGram.innerHTML = 'Gram';
     toGram.className = 'to-gram button';
@@ -100,6 +109,8 @@ document.getElementById('length').addEventListener('click', function(event){
 
     const fromButton = document.getElementById('from-button');
     fromButton.lastChild.remove();
+    const toButton = document.getElementById('to-button');
+    toButton.lastChild.remove();
 
     // FROM DROP DOWNS
     
@@ -129,6 +140,35 @@ document.getElementById('length').addEventListener('click', function(event){
     fromDropdown.appendChild(fromFeet);
     fromDropdown.appendChild(fromYard);
     fromDropdown.appendChild(fromKm);
+
+    // TO DROP DOWNS
+
+    const toDropdown = document.createElement('div');
+    toDropdown.className = 'to-dropdown';
+    toDropdown.id = 'to-dropdown';
+
+    toButton.appendChild(toDropdown);
+
+    const toMeter = document.createElement('button');
+    toMeter.innerHTML = 'Meter';
+    toMeter.className = 'to-meter button';
+
+    const toFeet = document.createElement('button');
+    toFeet.innerHTML = 'Feet';
+    toFeet.className = 'to-feet button';
+
+    const toYard = document.createElement('button');
+    toYard.innerHTML = 'Yard';
+    toYard.className = 'to-yard button';
+
+    const toKm = document.createElement('button');
+    toKm.innerHTML = 'kiloMeter';
+    toKm.className = 'to-km button';
+
+    toDropdown.appendChild(toMeter);
+    toDropdown.appendChild(toFeet);
+    toDropdown.appendChild(toYard);
+    toDropdown.appendChild(toKm);
     
 })
 
