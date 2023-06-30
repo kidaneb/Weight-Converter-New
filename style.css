@@ -30,8 +30,43 @@ body{
     padding: 10px;
 
 }
+.unit-container{
+    border: 1px solid red;
+    color: white;
+    height:10%;
+    width:100%;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.units-dropdown{
+    height:auto;
+    width:100%;
+    border: 1px solid red;
+    display: none;
+    margin-top: 9.5em; 
+    overflow-y: visible; 
+    
+}
+.btn{
+  height: 2em;
+  width:50% ;
+  margin-bottom: 0.05em;
+  z-index: 5;
+}
+/* .unit-container:hover .units-dropdown{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+} */
 .body-container{
-    height:70% ;
+    height:60% ;
     width:80% ;
     /* border: 1px solid red; */
     display: flex;
@@ -64,35 +99,34 @@ body{
     
 }
 .from-button{
-    height:80% ;
-    width:80% ;
-    font-size: 40px;
-    background-color: transparent;
-    color: aliceblue;
+    
+    color: white;
     border: 1px solid cyan;
-    border-radius: 5px;   
+    border-radius: 5px;
+    height:50%;
+    width:80%;
+    font-size: 2em;
+    font-weight: bold;
     display: flex;
-    align-items: center;
-    justify-content: center; 
     flex-direction: column;
-    position: relative;
-    transform: scale(1.05);
+    align-items: center;
+    justify-content: center;    
 }
 
 .from-dropdown{
-    height: 100%;
-    width: 100%;
     position: absolute;
+    height:auto;
+    width:80%;
+    border: 1px solid red;
     display: none;
-    top: 100%; /* Add this line */
-    left: 0; /* Add this line */
-    
-    z-index: 1; /* Add this line */
-    
+    margin-top: 7em; 
+    overflow-y: visible;
+    z-index: 5;
 }
+
 .button{
-    height:80% ;
-    width: 100%;
+    height:1.5em ;
+    width: 80%;
     border: 1px solid white;
     border-radius: 5px;
     color: aliceblue;
@@ -101,8 +135,9 @@ body{
     margin: 5px;
 }
 .from-button:hover .from-dropdown{
-    display:flex;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     
 }
 button:hover{
@@ -151,36 +186,34 @@ button:hover{
 }
 
 .to-button{
-    height:80% ;
-    width:80% ;
-    font-size: 40px;
-    background-color: transparent;
-    color: aliceblue;
+    color: white;
     border: 1px solid cyan;
-    border-radius: 5px;          
+    border-radius: 5px;
+    height:50%;
+    width:80%;
+    font-size: 2em;
+    font-weight: bold;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
-    flex-direction: column;
-    position: relative;
-    transform: scale(1.05);
 }
 
 .to-dropdown{
-    height: 100%;
-    width: 100%;
     position: absolute;
+    height:auto;
+    width:80%;
+    border: 1px solid red;
     display: none;
-    top: 100%; /* Add this line */
-    left: 0; /* Add this line */
-    
-    z-index: 1; /* Add this line */
-    
+    margin-top: 7em; 
+    overflow-y: visible;
+    z-index: 5; 
 }
 
 .to-button:hover .to-dropdown{
     display:flex;
     flex-direction: column;
+    align-items: center;
     
 }
 .to-input-container{
