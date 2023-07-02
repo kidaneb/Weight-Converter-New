@@ -541,17 +541,160 @@ document.getElementById('pressure').addEventListener('click', function(event){
     document.getElementById('unit').innerHTML = 'Pressure';
     event.stopPropagation();
 
-    // FROM DROPDOWNS   
+    const fromButton = document.getElementById('from-button');
+    fromButton.lastChild.remove();
+    const toButton = document.getElementById('to-button');
+    toButton.lastChild.remove();
 
-    // FROM DROPDOWN DYNAMICALLY   
+    // FROM DROPDOWNS
 
-    // FROM BUTTON EVENTS    
+    const fromDropdown = document.createElement('div');
+    fromDropdown.className = 'from-dropdown';
+    fromDropdown.id = 'from-dropdown';
+    
+    fromButton.appendChild(fromDropdown);
 
-    // TO DROP DOWNS    
+    const fromPascal = document.createElement('button');
+    fromPascal.innerHTML = 'Pascal';
+    fromPascal.className = 'from-pascal button';
 
-    // TO DROPDOWN DYNAMICALLY    
+    const fromBar = document.createElement('button');
+    fromBar.innerHTML = 'Bar';
+    fromBar.className = 'from-bar button';
+
+    const fromatm = document.createElement('button');
+    fromatm.innerHTML = 'atm';
+    fromatm.className = 'from-atm button';
+
+    const fromTorr = document.createElement('button');
+    fromTorr.innerHTML = 'Torr';
+    fromTorr.className = 'from-torr button';
+
+    fromDropdown.appendChild(fromPascal);
+    fromDropdown.appendChild(fromBar);
+    fromDropdown.appendChild(fromatm);
+    fromDropdown.appendChild(fromTorr);
+
+    // FROM DROPDOWN DYNAMICALLY 
+
+    fromButton.addEventListener('click', function(){
+        fromDropdown.style.display = 'flex';
+        fromDropdown.style.flexDirection = 'column';
+        fromDropdown.style.alignItems = 'center';
+    })
+    fromButton.addEventListener('mouseleave', function(){
+        fromDropdown.style.display = 'none';
+    }) 
+
+    // FROM BUTTON EVENTS 
+    fromButton.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('from-pascal')){
+            fromText.innerText = 'Pascal';
+            fromUnit = 1;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('1');
+        }
+        else if(e.target.classList.contains('from-bar')){
+            fromText.innerText = 'Bar';
+            fromUnit = 453.592;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('2');
+        }
+        else if(e.target.classList.contains('from-atm')){
+            fromText.innerText = 'atm';
+            fromUnit = 28/3495;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('3');
+        }
+        else if(e.target.classList.contains('from-torr')){
+            fromText.innerText = 'Torr';
+            fromUnit = 1000;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('4');
+        }
+    })   
+
+    // TO DROP DOWNS 
+    const toDropdown = document.createElement('div');
+    toDropdown.className = 'to-dropdown';
+    toDropdown.id = 'to-dropdown';
+    
+    toButton.appendChild(toDropdown);
+
+    const toPascal = document.createElement('button');
+    toPascal.innerHTML = 'Pascal';
+    toPascal.className = 'to-pascal button';
+
+    const toBar = document.createElement('button');
+    toBar.innerHTML = 'Bar';
+    toBar.className = 'to-bar button';
+
+    const toatm = document.createElement('button');
+    toatm.innerHTML = 'atm';
+    toatm.className = 'to-atm button';
+
+    const toTorr = document.createElement('button');
+    toTorr.innerHTML = 'Torr';
+    toTorr.className = 'to-torr button';
+
+    toDropdown.appendChild(toPascal);
+    toDropdown.appendChild(toBar);
+    toDropdown.appendChild(toatm);
+    toDropdown.appendChild(toTorr);   
+
+    // TO DROPDOWN DYNAMICALLY  
+    toButton.addEventListener('click', function(){
+        toDropdown.style.display = 'flex';
+        toDropdown.style.flexDirection = 'column';
+        toDropdown.style.alignItems = 'center';
+    })
+    toButton.addEventListener('mouseleave', function(){
+        toDropdown.style.display = 'none';
+    })   
 
     // TO BUTTON EVENTS
+    toButton.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('to-pascal')){
+            toText.innerText = 'Pascal';
+            toUnit = 1;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('1');
+        }
+        else if(e.target.classList.contains('to-bar')){
+            toText.innerText = 'Bar';
+            toUnit = 453.592;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('2');
+        }
+        else if(e.target.classList.contains('to-atm')){
+            toText.innerText = 'atm';
+            toUnit = 28/3495;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('3');
+        }
+        else if(e.target.classList.contains('to-torr')){
+            toText.innerText = 'Torr';
+            toUnit = 1000;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('4');
+        }
+    }) 
 
     
 })
@@ -560,19 +703,134 @@ document.getElementById('temprature').addEventListener('click', function(event){
     document.getElementById('unit').innerHTML = 'Temprature';
     event.stopPropagation();
     
+    const fromButton = document.getElementById('from-button');
+    fromButton.lastChild.remove();
+    const toButton = document.getElementById('to-button');
+    toButton.lastChild.remove();
 
     // FROM DROPDOWNS   
 
+    const fromDropdown = document.createElement('div');
+    fromDropdown.className = 'from-dropdown';
+    fromDropdown.id = 'from-dropdown';
+    
+    fromButton.appendChild(fromDropdown);
+
+    const fromCelsius = document.createElement('button');
+    fromCelsius.innerHTML = 'Degree Celsius';
+    fromCelsius.className = 'from-celsius button';
+
+    const fromFahrenheit = document.createElement('button');
+    fromFahrenheit.innerHTML = 'Fahrenheit';
+    fromFahrenheit.className = 'from-fahrenheit button';
+
+    const fromKelvin = document.createElement('button');
+    fromKelvin.innerHTML = 'Kelvin';
+    fromKelvin.className = 'from-kelvin button';   
+
+    fromDropdown.appendChild(fromCelsius);
+    fromDropdown.appendChild(fromFahrenheit);
+    fromDropdown.appendChild(fromKelvin);
+    
     // FROM DROPDOWN DYNAMICALLY   
-
+    fromButton.addEventListener('click', function(){
+        fromDropdown.style.display = 'flex';
+        fromDropdown.style.flexDirection = 'column';
+        fromDropdown.style.alignItems = 'center';
+        fromDropdown.style.marginTop = '6.2em';
+    })
+    fromButton.addEventListener('mouseleave', function(){
+        fromDropdown.style.display = 'none';
+    })
     // FROM BUTTON EVENTS    
-
+    fromButton.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('from-celsius')){
+            fromText.innerText = 'Celsius';
+            fromUnit = 1;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('1');
+        }
+        else if(e.target.classList.contains('from-fahrenheit')){
+            fromText.innerText = 'Fahrenheit';
+            fromUnit = 453.592;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('2');
+        }
+        else if(e.target.classList.contains('from-kelvin')){
+            fromText.innerText = 'Kelvin';
+            fromUnit = 28/3495;
+            if(fromInput.value !== ''){
+                calculation1();
+            }
+            console.log('3');
+        }
+        
+    })
     // TO DROP DOWNS    
 
+    const toDropdown = document.createElement('div');
+    toDropdown.className = 'to-dropdown';
+    toDropdown.id = 'to-dropdown';
+    
+    toButton.appendChild(toDropdown);
+
+    const toCelsius = document.createElement('button');
+    toCelsius.innerHTML = 'Degree Celsius';
+    toCelsius.className = 'to-celsius button';
+
+    const toFahrenheit = document.createElement('button');
+    toFahrenheit.innerHTML = 'Fahrenheit';
+    toFahrenheit.className = 'to-fahrenheit button';
+
+    const toKelvin = document.createElement('button');
+    toKelvin.innerHTML = 'Kelvin';
+    toKelvin.className = 'to-kelvin button';   
+
+    toDropdown.appendChild(toCelsius);
+    toDropdown.appendChild(toFahrenheit);
+    toDropdown.appendChild(toKelvin);
     // TO DROPDOWN DYNAMICALLY    
-
+    toButton.addEventListener('click', function(){
+        toDropdown.style.display = 'flex';
+        toDropdown.style.flexDirection = 'column';
+        toDropdown.style.alignItems = 'center';
+        toDropdown.style.marginTop = '6.2em';
+    })
+    toButton.addEventListener('mouseleave', function(){
+        toDropdown.style.display = 'none';
+    })
     // TO BUTTON EVENTS
-
+    toButton.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('to-celsius')){
+            toText.innerText = 'Celsius';
+            toUnit = 1;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('1');
+        }
+        else if(e.target.classList.contains('to-fahrenheit')){
+            toText.innerText = 'Fahrenheit';
+            toUnit = 453.592;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('2');
+        }
+        else if(e.target.classList.contains('to-kelvin')){
+            toText.innerText = 'Kelvin';
+            toUnit = 28/3495;
+            if(toInput.value !== ''){
+                calculation1();
+            }
+            console.log('3');
+        }
+        
+    })
 })
 document.getElementById('volume').addEventListener('click', function(event){
     unitDropdown.style.display = 'none';
