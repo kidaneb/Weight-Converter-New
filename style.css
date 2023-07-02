@@ -134,12 +134,12 @@ body{
     font-size: 20px;
     margin: 5px;
 }
-.from-button:hover .from-dropdown{
+/* .from-button:hover .from-dropdown{
     display: flex;
     flex-direction: column;
     align-items: center;
     
-}
+} */
 button:hover{
     background-color: rgb(87, 87, 217);
 }
@@ -210,12 +210,12 @@ button:hover{
     z-index: 5; 
 }
 
-.to-button:hover .to-dropdown{
+/* .to-button:hover .to-dropdown{
     display:flex;
     flex-direction: column;
     align-items: center;
     
-}
+} */
 .to-input-container{
     height:45% ;
     width: 90%;
