@@ -25,6 +25,11 @@ document.getElementById("mass").addEventListener("click", function (event) {
   document.getElementById("unit").innerHTML = "Mass";
   event.stopPropagation();
 
+  fromText.innerText = 'From';
+  toText.innerText = 'To';
+  fromInput = '';
+  toInput = '';
+
   const fromButton = document.getElementById("from-button");
   fromButton.lastChild.remove();
   const toButton = document.getElementById("to-button");
