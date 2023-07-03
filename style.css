@@ -34,7 +34,8 @@ body{
     border: 1px solid red;
     color: white;
     height:10%;
-    width:100%;
+    width:60%;
+    margin-top:1em ;
     font-size: 2em;
     font-weight: bold;
     display: flex;
@@ -45,11 +46,12 @@ body{
     
 }
 .units-dropdown{
+    position: absolute;
     height:auto;
-    width:100%;
+    width:50%;
     border: 1px solid red;
     display: none;
-    margin-top: 9.5em; 
+    margin-top: 7.34em; 
     overflow-y: visible; 
     
 }
