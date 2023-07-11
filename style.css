@@ -45,8 +45,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: transform 0.5s ease;
     
-    
+}
+.unit-container:hover{
+    transform: scale(1.03);
 }
 .units-dropdown{
     position: absolute;
@@ -120,7 +123,7 @@ body{
     position: absolute;
     height:auto;
     width:80%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     margin-top: 7em; 
     overflow-y: visible;
@@ -206,7 +209,7 @@ button:hover{
     position: absolute;
     height:auto;
     width:80%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     margin-top: 7em; 
     overflow-y: visible;
